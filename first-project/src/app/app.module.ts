@@ -5,14 +5,10 @@ import { HttpModule } from '@angular/http';
 import {CursosModule} from './cursos/cursos.module';
 
 import { AppComponent } from './app.component';
-import { MyFirstComponent } from './my-first/my-first.component';
-import { MyFirstWithCliComponent } from './my-first-with-cli/my-first-with-cli.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFirstComponent,
-    MyFirstWithCliComponent
   ],
   imports: [
     BrowserModule,
