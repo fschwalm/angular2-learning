@@ -1,0 +1,22 @@
+<section>
+
+  <article>
+    <h3>Interpolation / Interpolação</h3>
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>O resultado de 1 + 1 é:  {{ 1 + 1 }}</p>
+    <p>Função interpolada  {{ getValor() }}</p>
+  </article>
+
+  <article>
+    <h3>Property Binding</h3>
+    
+     <!--syntax sugar-->
+    <img [src]="urlImagem">
+    <!-- Behind the scenes -->
+    <img bind-src="urlImagem">
+
+
+    <img bind-src="urlImagem" [width]="setWidth(50)" [height]="setHeight(50)">
+  </article>
+
+</section>
