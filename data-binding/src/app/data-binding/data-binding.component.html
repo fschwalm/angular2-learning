@@ -1,3 +1,40 @@
+<section> 
+  <article>
+    <h3>Two-way data binding</h3>
+    <div>
+
+      <input type="text"
+        [value]="nome"
+        (input)="nome = $event.target.value"
+      >
+
+      <input type="text"
+        [ngModel]="nome"
+        (ngModelChange)="nome = $event"
+      >
+      <!-- syntax sugar-->
+      <input type="text"
+        [(ngModel)]="nome"
+      >
+      <!--behind the scenes-->
+      <input type="text"
+        bindon-ngModel="nome"
+      >
+
+      <p>Você digitou o valor de {{ nome }}</p>
+
+    </div>
+
+    <div>
+      <input type="text" [(ngModel)]="pessoa.nome" />
+      <input type="text" [(ngModel)]="pessoa.idade" />
+
+      <p>Nome: {{ pessoa.nome }}</p>
+      <p>Idade: {{ pessoa.idade }}</p>
+    </div>
+  </article>
+</section>
+
 <section>
   <article>
     <h3>Event Binding</h3>

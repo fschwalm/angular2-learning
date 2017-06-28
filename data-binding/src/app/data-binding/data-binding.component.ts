@@ -12,10 +12,15 @@ export class DataBindingComponent implements OnInit {
   currentValue: string;
   storedValue: string;
   isMouseOver: boolean = false;
+  nome: string = "";
+  pessoa: any = {
+    nome: "",
+    idade: ""
+  }
 
   constructor() {
     this.currentValue = "";
-   }
+  }
 
   click() {
     alert("Botão clicado");
