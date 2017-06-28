@@ -1,5 +1,30 @@
 <section>
   <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button (click)="click()">Me clique</button>
+
+      <input type="text"
+       (keyup)="onKeyup($event)"
+       (keyup.enter)="persistValue(inputElement.value)"
+       (blur)="persistValue(inputElement.value)"
+       #inputElement />
+       <p>Valor atual : {{ currentValue }}</p>
+       <p>Valor salvo com enter: {{ storedValue }}</p>
+    </div>
+
+    <p 
+      (mouseover)="onMouseOver()"
+      (mouseout)="onMouseOver()"
+      [class.hightlight]="isMouseOver"
+    >Passe o mouse</p>
+  </article>
+</section>
+
+
+
+<section>
+  <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma classe:
