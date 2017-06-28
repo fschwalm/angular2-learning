@@ -1,4 +1,22 @@
 <section>
+  <article>
+    <h3>Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #selectedClass (change)="0">
+        <option value="success">Sucesso</option>
+        <option value="warning">Alerta</option>
+        <option value="error">Erro</option>
+      </select>
+    </div>
+
+    <div [class]="selectedClass.value">A classe selecionada foi {{ selectedClass.value }}</div>
+    <div [style.display]="selectedClass.value == 'error' ? 'block' : 'none'">Error</div>
+  </article>
+
+</section>
+
+<section>
 
   <article>
     <h3>Interpolation / Interpolação</h3>
