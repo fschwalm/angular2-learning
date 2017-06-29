@@ -2,6 +2,8 @@
   <article>
       <h3>Input / Output de properties</h3>
       <app-input-property [someInput]="someValue"></app-input-property>
+
+      <contador valor="10" (mudouValor)="onMudouValor($event)"></contador>
   </article>
 </section>
 
