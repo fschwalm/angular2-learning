@@ -18,6 +18,8 @@ export class DataBindingComponent implements OnInit {
     idade: ""
   }
 
+  someValue: string = "blablballbalbalbalbla";
+
   constructor() {
     this.currentValue = "";
   }
