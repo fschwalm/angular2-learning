@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+
+  valorInicial: number = 25;
+  isDestroyed: boolean = false;
+
+  increment() {
+    this.valorInicial++;
+  }
+
+  destroy() {
+    this.isDestroyed = !this.isDestroyed;
+  }
 }
